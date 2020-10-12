@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
 
   getReviewsForCampSortByHelpfulness() {
-    axios.get(`http://localhost:3004/api/helpful/${this.state.campId}`)
+    axios.get(`/api/helpful/${this.state.campId}`)
       .then((reviews) => {
         this.setState({
           campReviews: reviews.data
@@ -34,7 +34,7 @@ export default class App extends React.Component {
   }
 
   getReviewsForCampSortByDate() {
-    axios.get(`http://localhost:3004/api/date/${this.state.campId}`)
+    axios.get(`/api/date/${this.state.campId}`)
       .then((reviews) => {
         this.setState({
           campReviews: reviews.data
